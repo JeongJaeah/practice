@@ -58,3 +58,5 @@ async function startServer(app: core.Express) {
 }
 
 startServer(app);
+
+console.log(1)
