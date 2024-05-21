@@ -53,6 +53,7 @@ async function startServer(app: core.Express) {
     console.log('test')
     console.log('test')
     console.log('test')
+    console.log('test')
     if (process?.send) {
       process.send('ready');
     }
