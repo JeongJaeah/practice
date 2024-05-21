@@ -44,7 +44,7 @@ async function startServer(app: core.Express) {
 
   // start the server
   server = app.listen(8080, () => {
-    console.log('ver7')
+    console.log('ver8')
     if (process?.send) {
       process.send('ready');
     }
