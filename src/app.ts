@@ -43,14 +43,14 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 async function startServer(app: core.Express) {
 
   // start the server
-  server = app.listen(8080, () => {
-    console.log('ver8')
+  server = app.listen(9101, () => {
+    console.log('ver9')
     if (process?.send) {
       process.send('ready');
     }
     console.log(`
     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-    ┃   Server listening on port: 8080   ┃
+    ┃   Server listening on port: 9101   ┃
     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
     `);
   });
