@@ -23,7 +23,13 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+app.get('/', (req, res) => {
+  res.send('Jenkins Test')
+})
+
 app.use('/', pageRouter);
+
 
 /* catch 404 */
 app.use(function(req: Request, res: Response, next: NextFunction) {
@@ -39,15 +45,13 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   res.render('error.html');
 });
 
-app.get('/', (req, res) => {
-  res.send('Jenkins Test')
-})
+
 
 
 async function startServer(app: core.Express) {
 
   // start the server
-  server = app.listen(9101, () => {
+  server = app.listen(9102, () => {
     console.log('ver10')
     if (process?.send) {
       process.send('ready');
