@@ -41,8 +41,6 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 
 
 async function startServer(app: core.Express) {
-  const pool = await createPools();
-  app.locals.pool = pool;
 
   // start the server
   server = app.listen(8080, () => {
