@@ -5,8 +5,6 @@ import express, { NextFunction, Request, Response } from 'express';
 import http from 'http';
 import pageRouter from "./routes/page/pageRouter";
 
-const { createPools } = require('./modules/db/dbPool');
-
 let server: http.Server;
 
 const app = express();
@@ -25,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get('/', (req, res) => {
-  res.send('Jenkins Test')
+  res.send('Jenkins Test2');
 })
 
 app.use('/', pageRouter);
