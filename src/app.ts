@@ -39,6 +39,10 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   res.render('error.html');
 });
 
+app.get('/', (req, res) => {
+  res.send('Jenkins Test')
+})
+
 
 async function startServer(app: core.Express) {
 
